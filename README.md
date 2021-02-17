@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # InSituCellTools (isctools)
 Methods for analysis of NanostringWTA and other probe based spatial transcriptomics data using probabilistic generative models and variational inference.
 
@@ -34,3 +35,7 @@ See [Part 1: Background Removal and Differential Expression with isctools](https
 See [Part 2: Cell Type Mapping with cell2location](https://github.com/AlexanderAivazidis/InSituCellTools/blob/master/notebooks/Part2_MapCelltypesToProbeCounts.ipynb) for cell type mapping.
 
 The cell type mapping uses an adapted version of the cell2location algorithm (see [cell2location](https://github.com/BayraktarLab/cell2location)) and will soon be integrated with the cell2location package, but for now it is part of isctools.
+=======
+# CountCorrect
+A background noise correction method for Nanostring wta data.
+>>>>>>> 50c382a6829b0bb41ed1dac26ea80826ca6e89f0
