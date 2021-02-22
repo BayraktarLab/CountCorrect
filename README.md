@@ -17,7 +17,7 @@ Running CountCorrect on GPU is much faster and only takes 2-3 minutes for 100 sa
 We recommend to first set up a conda environment with the required packages, but not with pymc3 and theano:
 
 ```bash
-conda create -n cellpymc python=3.7 numpy pandas jupyter scanpy \
+conda create -n countcorrect python=3.7 numpy pandas jupyter scanpy \
 ipython seaborn matplotlib \
 pygpu --channel bioconda --channel conda-forge
 ```
