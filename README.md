@@ -24,5 +24,5 @@ pip install "pymc3>=3.8,<3.10" torch
 Finally you can install CountCorrect:
 
 ```bash
-pip install https://github.com/AlexanderAivazidis/CountCorrect/
+ pip install git+https://github.com/AlexanderAivazidis/CountCorrect/
 ```
