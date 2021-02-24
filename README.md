@@ -19,7 +19,7 @@ pygpu --channel bioconda --channel conda-forge
 And then to install pymc3 and theano with pip:
 
 ```bash
-pip install pymc3>=3.8,<3.10 torch
+pip install "pymc3>=3.8,<3.10" torch
 ```
 Finally you can install CountCorrect:
 
