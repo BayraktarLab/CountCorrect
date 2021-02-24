@@ -9,11 +9,7 @@ import theano
 from pymc3.variational.callbacks import CheckParametersConvergence
 from tqdm.auto import tqdm
 
-<<<<<<< HEAD
 from countcorrect.base_model import BaseModel
-=======
-from base_model import BaseModel
->>>>>>> 50c382a6829b0bb41ed1dac26ea80826ca6e89f0
 
 # base model class - defining shared methods but not the model itself
 class Pymc3Model(BaseModel):

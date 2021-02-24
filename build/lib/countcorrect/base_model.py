@@ -7,11 +7,6 @@ import numpy as np
 import pandas as pd
 from scipy.optimize import linear_sum_assignment
 
-<<<<<<< HEAD
-=======
-from plot_heatmap import clustermap
-
->>>>>>> 50c382a6829b0bb41ed1dac26ea80826ca6e89f0
 # base model class - defining shared methods but not the model itself
 class BaseModel():
     r"""Base class for pymc3 and pyro models.

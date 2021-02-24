@@ -35,17 +35,10 @@ import matplotlib.cm as cm
 from pymc3.distributions.dist_math import bound, logpow, factln, binomln
 #from custom_distributions import NegativeBinomial_Adapted
 
-<<<<<<< HEAD
 from countcorrect.pymc3_model import Pymc3Model
 
 # defining the model itself
 class ProbeCounts_GeneralModel(Pymc3Model):
-=======
-from pymc3_model import Pymc3Model
-
-# defining the model itself
-class ProbeCounts_GeneralModel_V2(Pymc3Model):
->>>>>>> 50c382a6829b0bb41ed1dac26ea80826ca6e89f0
     r"""NanostringWTA Generative Model:
     :param X_data: Numpy array of gene probe counts (cols) in ROIs (rows)
     :param Y_data: Numpy array of negative probe counts (cols) in ROIs (rows)

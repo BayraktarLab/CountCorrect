@@ -41,6 +41,7 @@ countcorrect/__pycache__/run_cc.cpython-37.pyc
 data/nanostringWTA_fetailBrain_AnnData_geneProbes_smallExample.p
 data/nanostringWTA_fetailBrain_AnnData_negativeProbes_smallExample.p
 data/polioudakis2019_meanExpressionProfiles.csv
+dist/countcorrect-0.1-py3.7.egg
 images/CellTypeSpecificAOIs.PNG
 images/GeometricROIs.PNG
 images/ProbeCounts_GeneralModel_V2.PNG
