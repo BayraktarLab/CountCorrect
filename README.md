@@ -16,10 +16,10 @@ ipython seaborn matplotlib \
 pygpu --channel bioconda --channel conda-forge
 ```
 
-And then to install pymc3 and theano with pip:
+And then install these packages with pip:
 
 ```bash
-pip install "pymc3>=3.8,<3.10" torch
+pip install "pymc3>=3.8,<3.10" torch arviz==0.11.1
 ```
 Finally you can install CountCorrect:
 
