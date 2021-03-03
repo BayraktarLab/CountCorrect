@@ -1,1 +1,1 @@
-from .ProbeCounts__GeneralModel import ProbeCounts_GeneralModel
+from countcorrect.run_cc import run_countcorrect

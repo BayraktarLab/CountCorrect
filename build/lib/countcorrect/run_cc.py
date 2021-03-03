@@ -8,11 +8,16 @@ from countcorrect.ProbeCounts__GeneralModel import ProbeCounts_GeneralModel
 import numpy as np
 
 def run_countcorrect(counts_geneProbes, counts_negativeProbes, counts_nuclei,
-                     n_factors = 30,
+                     n_factors = 10,
                      total_iterations = 20000,
                      learning_rate = 0.01,
                      posterior_samples = 100,
                      verbose = True):
+    
+    # Check input is sensible:
+    
+    if np.any(counts_nuclei == 0) or np.any(np.isnan(counts_nuclei)) or np.any(np.isinf(counts_nuclei)):
+        raise ValueError('Some of your nuclei counts are 0, nan or inf')
     
     if verbose:
         
