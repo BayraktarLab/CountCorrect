@@ -14,6 +14,9 @@ def run_countcorrect(counts_geneProbes, counts_negativeProbes, counts_nuclei,
                      posterior_samples = 100,
                      verbose = True):
     
+    if np.any(counts_nuclei == 0) or np.any(np.isnan(counts_nuclei)) or np.any(np.isinf(counts_nuclei)):
+        raise ValueError('Some of your nuclei counts are 0, nan or inf')
+    
     if verbose:
         
         print('Initializing model...')
