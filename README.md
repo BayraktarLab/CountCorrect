@@ -19,7 +19,7 @@ pygpu --channel bioconda --channel conda-forge
 And then install these packages with pip:
 
 ```bash
-pip install "pymc3>=3.8,<3.10" torch arviz==0.11.1
+pip install "pymc3>=3.8,<3.10" torch arviz==0.11.1 adjustText
 ```
 Finally you can install CountCorrect:
 
