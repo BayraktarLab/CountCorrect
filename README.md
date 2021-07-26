@@ -5,7 +5,6 @@ A method for background removal from Nanostring WTA data
 
 See [Background Removal with CountCorrect](https://github.com/AlexanderAivazidis/CountCorrect/blob/main/BackgroundCorrection.ipynb)
 
-```
 ## Configure your own conda environment and installation
 
 1. Installation of dependecies and configuring environment (Method 1 (preferred) and Method 2)
