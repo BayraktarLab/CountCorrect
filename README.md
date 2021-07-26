@@ -5,12 +5,9 @@ A method for background removal from Nanostring WTA data
 
 See [Background Removal with CountCorrect](https://github.com/AlexanderAivazidis/CountCorrect/blob/main/BackgroundCorrection.ipynb)
 
-## Configure your own conda environment and installation
+## Installation
 
-1. Installation of dependecies and configuring environment (Method 1 (preferred) and Method 2)
-2. Installation of cell2location
-
-Prior to installing countcorrect you need to install miniconda and create a conda environment containing pymc3 and theano ready for use on GPU. Follow the steps below:
+You will first need to configure an appropriate conda environment and then you can install countcorrect directly from github. How to do this is explained below.
 
 If you do not have conda please install Miniconda first:
 
@@ -20,6 +17,7 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 # use prefix /path/to/software/miniconda3
 ```
+Now there are two ways you can configure the 'countcorrect' conda environment:
 
 #### 1. Method 1 (preferred): Create environment from file
 
@@ -33,7 +31,7 @@ conda env create -f environment.yml
 
 #### 1. Method 2: Create conda environment manually
 
-Create conda environment with the required packages pymc3 and scanpy:
+Create conda environment manually using first conda:
 
 ```bash
 conda create -n countcorrect python=3.7 numpy pandas jupyter scanpy \
