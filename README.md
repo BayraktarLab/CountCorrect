@@ -9,6 +9,8 @@ See [Background Removal with CountCorrect](https://github.com/AlexanderAivazidis
 
 You will first need to configure an appropriate conda environment and then you can install countcorrect directly from github. How to do this is explained below.
 
+### 1. Configure `countcorrect` conda environment
+
 If you do not have conda please install Miniconda first:
 
 ```bash
