@@ -1,8 +1,0 @@
-pymc3
-torch
-theano
-pygpu
-numpy
-pandas
-scanpy
-plotnine
