@@ -1,0 +1,4 @@
+/build
+/dist
+countcorrect.egg-info/
+countcorrect/__pycache__
