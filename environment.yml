@@ -4,10 +4,14 @@ channels:
   - conda-forge
 dependencies:
   - python=3.7
-  - clangxx_osx-64
+  - cxx-compiler
+  - blas-devel
   - mkl-service
-  - libcxx
   - numpy
+  - theano
+  - tensorflow
+  - blas
+  - pymc3>=3.8,<3.10
   - pandas<1.3
   - h5py<3.2
   - jupyter
@@ -20,7 +24,6 @@ dependencies:
   - click
   - pip
   - pip:
-    - pymc3>=3.8,<3.10
     - diffxpy
     - torch
     - arviz==0.11.1
