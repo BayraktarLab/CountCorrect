@@ -69,7 +69,7 @@ class ProbeCounts_GeneralModel(Pymc3Model):
         verbose = True,
         var_names=None, var_names_read=None,
         obs_names=None, fact_names=None, sample_id=None,
-        n_factors = 15,
+        n_factors = 30,
         v_mu_b_n_hyper = 0.05, # Confidence in the prior distribution for non-specific binding that is automatically set based on negative probe    
                       # data. v_b_n denotes the ratio of standard deviation to mean in the prior distribution. So the default value of 0.05 
                       # implies high confidence that the negative probe counts are representative of non-specific binding in the gene 
@@ -769,22 +769,15 @@ class ProbeCounts_GeneralModel(Pymc3Model):
         mean_counts = np.mean(self.X_data, axis = 0)
         total_counts = np.sum(self.X_data, axis = 0)
         removed_counts = np.sum(self.X_data, axis = 0) - np.sum(self.X_corrected_mean, axis = 0)
-        removed_counts_q05 = np.sum(self.X_data, axis = 0) - np.sum(self.X_corrected_q05, axis = 0)
-        removed_counts_q95 = np.sum(self.X_data, axis = 0) - np.sum(self.X_corrected_q95, axis = 0)
         fraction_removed_counts = removed_counts/total_counts
-        fraction_removed_counts_q05 = removed_counts_q05/total_counts
-        fraction_removed_counts_q95 = removed_counts_q95/total_counts
         
-        ranked_genes_tab = pd.DataFrame(columns = ('Gene', 'Total Counts', 'Removed Counts', 'Fraction Removed Counts (Mean)',
-                                                  'Fraction Removed Counts (q05)', 'Fraction Removed Counts (q95)'))
+        ranked_genes_tab = pd.DataFrame(columns = ('Gene', 'Total Counts', 'Removed Counts', 'Fraction Removed Counts (Mean)'))
                                         
         ranked_genes_tab['Gene'] = self.var_names
         ranked_genes_tab['Total Counts'] = [int(total_counts[i]) for i in range(len(total_counts))]
         ranked_genes_tab['Mean Counts'] = [int(mean_counts[i]) for i in range(len(mean_counts))]
         ranked_genes_tab['Removed Counts'] = [int(removed_counts[i]) for i in range(len(removed_counts))] 
         ranked_genes_tab['Fraction Removed Counts (Mean)'] = fraction_removed_counts
-        ranked_genes_tab['Fraction Removed Counts (q05)'] = fraction_removed_counts_q05
-        ranked_genes_tab['Fraction Removed Counts (q95)'] = fraction_removed_counts_q95
         
         return ranked_genes_tab.sort_values('Fraction Removed Counts (Mean)', ascending = False)
     
